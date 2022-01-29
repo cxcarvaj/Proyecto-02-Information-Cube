@@ -1,0 +1,493 @@
+{
+  "uuid": "9f5ba7eb-f1a7-cfa6-bcf0-13e8c87e3876",
+  "last_modified": 1643489602985,
+  "version": "3.0.0.20500",
+  "name": "CuboAdventureWorks",
+  "is_draft": false,
+  "model_name": "AdventureWorks",
+  "description": "",
+  "null_string": null,
+  "dimensions": [
+    {
+      "name": "PRODUCTKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "PRODUCTKEY",
+      "derived": null
+    },
+    {
+      "name": "ORDERDATEKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "ORDERDATEKEY",
+      "derived": null
+    },
+    {
+      "name": "CUSTOMERKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "CUSTOMERKEY",
+      "derived": null
+    },
+    {
+      "name": "CURRENCYKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "CURRENCYKEY",
+      "derived": null
+    },
+    {
+      "name": "SALESTERRITORYKEY",
+      "table": "FACTINTERNETSALES",
+      "column": "SALESTERRITORYKEY",
+      "derived": null
+    },
+    {
+      "name": "CUSTOMERKEY",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "CUSTOMERKEY"
+      ]
+    },
+    {
+      "name": "FIRSTNAME",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "FIRSTNAME"
+      ]
+    },
+    {
+      "name": "LASTNAME",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "LASTNAME"
+      ]
+    },
+    {
+      "name": "BIRTHDATE",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "BIRTHDATE"
+      ]
+    },
+    {
+      "name": "GENDER",
+      "table": "DIMCUSTOMER",
+      "column": null,
+      "derived": [
+        "GENDER"
+      ]
+    },
+    {
+      "name": "PRODUCTKEY",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "PRODUCTKEY"
+      ]
+    },
+    {
+      "name": "PRODUCTCATEGORYKEY",
+      "table": "DIMPRODUCT",
+      "column": "PRODUCTCATEGORYKEY",
+      "derived": null
+    },
+    {
+      "name": "PRODUCTSUBCATEGORYKEY",
+      "table": "DIMPRODUCT",
+      "column": "PRODUCTSUBCATEGORYKEY",
+      "derived": null
+    },
+    {
+      "name": "ENGLISHPRODUCTNAME",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "ENGLISHPRODUCTNAME"
+      ]
+    },
+    {
+      "name": "STANDARDCOST",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STANDARDCOST"
+      ]
+    },
+    {
+      "name": "COLOR",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "COLOR"
+      ]
+    },
+    {
+      "name": "SIZE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "SIZE"
+      ]
+    },
+    {
+      "name": "STYLE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STYLE"
+      ]
+    },
+    {
+      "name": "MODELNAME",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "MODELNAME"
+      ]
+    },
+    {
+      "name": "ENGLISHDESCRIPTION",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "ENGLISHDESCRIPTION"
+      ]
+    },
+    {
+      "name": "STARTDATE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STARTDATE"
+      ]
+    },
+    {
+      "name": "ENDDATE",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "ENDDATE"
+      ]
+    },
+    {
+      "name": "STATUS",
+      "table": "DIMPRODUCT",
+      "column": null,
+      "derived": [
+        "STATUS"
+      ]
+    },
+    {
+      "name": "CURRENCYKEY",
+      "table": "DIMCURRENCY",
+      "column": null,
+      "derived": [
+        "CURRENCYKEY"
+      ]
+    },
+    {
+      "name": "CURRENCYNAME",
+      "table": "DIMCURRENCY",
+      "column": null,
+      "derived": [
+        "CURRENCYNAME"
+      ]
+    },
+    {
+      "name": "SALESTERRITORYKEY",
+      "table": "DIMSALESTERRITORY",
+      "column": null,
+      "derived": [
+        "SALESTERRITORYKEY"
+      ]
+    },
+    {
+      "name": "SALESTERRITORYREGION",
+      "table": "DIMSALESTERRITORY",
+      "column": null,
+      "derived": [
+        "SALESTERRITORYREGION"
+      ]
+    },
+    {
+      "name": "SALESTERRITORYCOUNTRY",
+      "table": "DIMSALESTERRITORY",
+      "column": null,
+      "derived": [
+        "SALESTERRITORYCOUNTRY"
+      ]
+    },
+    {
+      "name": "SALESTERRITORYGROUP",
+      "table": "DIMSALESTERRITORY",
+      "column": null,
+      "derived": [
+        "SALESTERRITORYGROUP"
+      ]
+    },
+    {
+      "name": "DATEKEY",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "DATEKEY"
+      ]
+    },
+    {
+      "name": "DAYNUMBEROFWEEK",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "DAYNUMBEROFWEEK"
+      ]
+    },
+    {
+      "name": "ENGLISHDAYNAMEOFWEEK",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "ENGLISHDAYNAMEOFWEEK"
+      ]
+    },
+    {
+      "name": "DAYNUMBEROFMONTH",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "DAYNUMBEROFMONTH"
+      ]
+    },
+    {
+      "name": "DAYNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "DAYNUMBEROFYEAR"
+      ]
+    },
+    {
+      "name": "WEEKNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "WEEKNUMBEROFYEAR"
+      ]
+    },
+    {
+      "name": "ENGLISHMONTHNAME",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "ENGLISHMONTHNAME"
+      ]
+    },
+    {
+      "name": "MONTHNUMBEROFYEAR",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "MONTHNUMBEROFYEAR"
+      ]
+    },
+    {
+      "name": "CALENDARQUARTER",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "CALENDARQUARTER"
+      ]
+    },
+    {
+      "name": "CALENDARSEMESTER",
+      "table": "DIMDATE",
+      "column": null,
+      "derived": [
+        "CALENDARSEMESTER"
+      ]
+    },
+    {
+      "name": "PRODUCTSUBCATEGORYKEY",
+      "table": "DIMPRODUCTSUBCATEGORY",
+      "column": null,
+      "derived": [
+        "PRODUCTSUBCATEGORYKEY"
+      ]
+    },
+    {
+      "name": "ENGLISHPRODUCTSUBCATEGORYNAME",
+      "table": "DIMPRODUCTSUBCATEGORY",
+      "column": null,
+      "derived": [
+        "ENGLISHPRODUCTSUBCATEGORYNAME"
+      ]
+    },
+    {
+      "name": "PRODUCTCATEGORYKEY",
+      "table": "DIMPRODUCTCATEGORY",
+      "column": null,
+      "derived": [
+        "PRODUCTCATEGORYKEY"
+      ]
+    },
+    {
+      "name": "ENGLISHPRODUCTCATEGORYNAME",
+      "table": "DIMPRODUCTCATEGORY",
+      "column": null,
+      "derived": [
+        "ENGLISHPRODUCTCATEGORYNAME"
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "name": "_COUNT_",
+      "function": {
+        "expression": "COUNT",
+        "parameter": {
+          "type": "constant",
+          "value": "1"
+        },
+        "returntype": "bigint"
+      }
+    },
+    {
+      "name": "TOTAL_ORDENES",
+      "function": {
+        "expression": "SUM",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.ORDERQUANTITY"
+        },
+        "returntype": "bigint"
+      }
+    },
+    {
+      "name": "MAXIMO_DESCUENTO",
+      "function": {
+        "expression": "MAX",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.DISCOUNTAMOUNT"
+        },
+        "returntype": "double"
+      }
+    },
+    {
+      "name": "MINIMO_DESCUENTO",
+      "function": {
+        "expression": "MIN",
+        "parameter": {
+          "type": "column",
+          "value": "FACTINTERNETSALES.DISCOUNTAMOUNT"
+        },
+        "returntype": "double"
+      }
+    }
+  ],
+  "dictionaries": [],
+  "rowkey": {
+    "rowkey_columns": [
+      {
+        "column": "FACTINTERNETSALES.PRODUCTKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.ORDERDATEKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.CUSTOMERKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.CURRENCYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "FACTINTERNETSALES.SALESTERRITORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMPRODUCT.PRODUCTCATEGORYKEY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      }
+    ]
+  },
+  "hbase_mapping": {
+    "column_family": [
+      {
+        "name": "F1",
+        "columns": [
+          {
+            "qualifier": "M",
+            "measure_refs": [
+              "_COUNT_",
+              "TOTAL_ORDENES",
+              "MAXIMO_DESCUENTO",
+              "MINIMO_DESCUENTO"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "aggregation_groups": [
+    {
+      "includes": [
+        "FACTINTERNETSALES.PRODUCTKEY",
+        "FACTINTERNETSALES.ORDERDATEKEY",
+        "FACTINTERNETSALES.CUSTOMERKEY",
+        "FACTINTERNETSALES.CURRENCYKEY",
+        "FACTINTERNETSALES.SALESTERRITORYKEY",
+        "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
+        "DIMPRODUCT.PRODUCTCATEGORYKEY"
+      ],
+      "select_rule": {
+        "hierarchy_dims": [],
+        "mandatory_dims": [],
+        "joint_dims": []
+      }
+    }
+  ],
+  "signature": "3JBrgvAjcAslC8uCYEWc0w==",
+  "notify_list": [],
+  "status_need_notify": [
+    "ERROR",
+    "DISCARDED",
+    "SUCCEED"
+  ],
+  "partition_date_start": 0,
+  "partition_date_end": 3153600000000,
+  "auto_merge_time_ranges": [
+    604800000,
+    2419200000
+  ],
+  "volatile_range": 0,
+  "retention_range": 0,
+  "engine_type": 4,
+  "storage_type": 2,
+  "override_kylin_properties": {},
+  "cuboid_black_list": [],
+  "parent_forward": 3,
+  "mandatory_dimension_set_list": [],
+  "snapshot_table_desc_list": []
+}
