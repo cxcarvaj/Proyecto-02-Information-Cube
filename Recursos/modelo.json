@@ -1,6 +1,6 @@
 {
-  "uuid": "ffa0472d-4f86-15b9-34fd-e6c415dd07c2",
-  "last_modified": 1643485217205,
+  "uuid": "f3279a41-4067-17b8-edf0-f4777e177677",
+  "last_modified": 1643646965537,
   "version": "3.0.0.20500",
   "name": "AdventureWorks",
   "owner": "ADMIN",
@@ -20,20 +20,6 @@
         ],
         "foreign_key": [
           "FACTINTERNETSALES.CUSTOMERKEY"
-        ]
-      }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCT",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCT",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCT.PRODUCTKEY"
-        ],
-        "foreign_key": [
-          "FACTINTERNETSALES.PRODUCTKEY"
         ]
       }
     },
@@ -78,34 +64,6 @@
           "FACTINTERNETSALES.ORDERDATEKEY"
         ]
       }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCTSUBCATEGORY",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCTSUBCATEGORY",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCTSUBCATEGORY.PRODUCTSUBCATEGORYKEY"
-        ],
-        "foreign_key": [
-          "DIMPRODUCT.PRODUCTSUBCATEGORYKEY"
-        ]
-      }
-    },
-    {
-      "table": "ADVENTUREWORKSDW.DIMPRODUCTCATEGORY",
-      "kind": "LOOKUP",
-      "alias": "DIMPRODUCTCATEGORY",
-      "join": {
-        "type": "inner",
-        "primary_key": [
-          "DIMPRODUCTCATEGORY.PRODUCTCATEGORYKEY"
-        ],
-        "foreign_key": [
-          "DIMPRODUCT.PRODUCTCATEGORYKEY"
-        ]
-      }
     }
   ],
   "dimensions": [
@@ -113,7 +71,6 @@
       "table": "FACTINTERNETSALES",
       "columns": [
         "CUSTOMERKEY",
-        "PRODUCTKEY",
         "CURRENCYKEY",
         "SALESTERRITORYKEY",
         "ORDERDATEKEY"
@@ -127,24 +84,6 @@
         "GENDER",
         "BIRTHDATE",
         "CUSTOMERKEY"
-      ]
-    },
-    {
-      "table": "DIMPRODUCT",
-      "columns": [
-        "PRODUCTKEY",
-        "ENGLISHPRODUCTNAME",
-        "COLOR",
-        "SIZE",
-        "STANDARDCOST",
-        "MODELNAME",
-        "STYLE",
-        "ENGLISHDESCRIPTION",
-        "STATUS",
-        "STARTDATE",
-        "ENDDATE",
-        "PRODUCTSUBCATEGORYKEY",
-        "PRODUCTCATEGORYKEY"
       ]
     },
     {
@@ -177,20 +116,6 @@
         "CALENDARQUARTER",
         "CALENDARSEMESTER"
       ]
-    },
-    {
-      "table": "DIMPRODUCTSUBCATEGORY",
-      "columns": [
-        "PRODUCTSUBCATEGORYKEY",
-        "ENGLISHPRODUCTSUBCATEGORYNAME"
-      ]
-    },
-    {
-      "table": "DIMPRODUCTCATEGORY",
-      "columns": [
-        "PRODUCTCATEGORYKEY",
-        "ENGLISHPRODUCTCATEGORYNAME"
-      ]
     }
   ],
   "metrics": [
@@ -211,5 +136,5 @@
     "partition_condition_builder": "org.apache.kylin.metadata.model.PartitionDesc$DefaultPartitionConditionBuilder"
   },
   "capacity": "MEDIUM",
-  "projectName": "AdventureWorksProject"
+  "projectName": "AdventureWorks"
 }

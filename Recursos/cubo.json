@@ -1,19 +1,13 @@
 {
-  "uuid": "9f5ba7eb-f1a7-cfa6-bcf0-13e8c87e3876",
-  "last_modified": 1643489602985,
+  "uuid": "f2d18814-ec95-fb10-1028-b09310ccad0f",
+  "last_modified": 1643647079925,
   "version": "3.0.0.20500",
-  "name": "CuboAdventureWorks",
+  "name": "CubedAdventureWorksDW",
   "is_draft": false,
   "model_name": "AdventureWorks",
   "description": "",
   "null_string": null,
   "dimensions": [
-    {
-      "name": "PRODUCTKEY",
-      "table": "FACTINTERNETSALES",
-      "column": "PRODUCTKEY",
-      "derived": null
-    },
     {
       "name": "ORDERDATEKEY",
       "table": "FACTINTERNETSALES",
@@ -76,106 +70,6 @@
       "column": null,
       "derived": [
         "GENDER"
-      ]
-    },
-    {
-      "name": "PRODUCTKEY",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "PRODUCTKEY"
-      ]
-    },
-    {
-      "name": "PRODUCTCATEGORYKEY",
-      "table": "DIMPRODUCT",
-      "column": "PRODUCTCATEGORYKEY",
-      "derived": null
-    },
-    {
-      "name": "PRODUCTSUBCATEGORYKEY",
-      "table": "DIMPRODUCT",
-      "column": "PRODUCTSUBCATEGORYKEY",
-      "derived": null
-    },
-    {
-      "name": "ENGLISHPRODUCTNAME",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "ENGLISHPRODUCTNAME"
-      ]
-    },
-    {
-      "name": "STANDARDCOST",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "STANDARDCOST"
-      ]
-    },
-    {
-      "name": "COLOR",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "COLOR"
-      ]
-    },
-    {
-      "name": "SIZE",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "SIZE"
-      ]
-    },
-    {
-      "name": "STYLE",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "STYLE"
-      ]
-    },
-    {
-      "name": "MODELNAME",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "MODELNAME"
-      ]
-    },
-    {
-      "name": "ENGLISHDESCRIPTION",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "ENGLISHDESCRIPTION"
-      ]
-    },
-    {
-      "name": "STARTDATE",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "STARTDATE"
-      ]
-    },
-    {
-      "name": "ENDDATE",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "ENDDATE"
-      ]
-    },
-    {
-      "name": "STATUS",
-      "table": "DIMPRODUCT",
-      "column": null,
-      "derived": [
-        "STATUS"
       ]
     },
     {
@@ -305,38 +199,6 @@
       "derived": [
         "CALENDARSEMESTER"
       ]
-    },
-    {
-      "name": "PRODUCTSUBCATEGORYKEY",
-      "table": "DIMPRODUCTSUBCATEGORY",
-      "column": null,
-      "derived": [
-        "PRODUCTSUBCATEGORYKEY"
-      ]
-    },
-    {
-      "name": "ENGLISHPRODUCTSUBCATEGORYNAME",
-      "table": "DIMPRODUCTSUBCATEGORY",
-      "column": null,
-      "derived": [
-        "ENGLISHPRODUCTSUBCATEGORYNAME"
-      ]
-    },
-    {
-      "name": "PRODUCTCATEGORYKEY",
-      "table": "DIMPRODUCTCATEGORY",
-      "column": null,
-      "derived": [
-        "PRODUCTCATEGORYKEY"
-      ]
-    },
-    {
-      "name": "ENGLISHPRODUCTCATEGORYNAME",
-      "table": "DIMPRODUCTCATEGORY",
-      "column": null,
-      "derived": [
-        "ENGLISHPRODUCTCATEGORYNAME"
-      ]
     }
   ],
   "measures": [
@@ -374,7 +236,7 @@
       }
     },
     {
-      "name": "MINIMO_DESCUENTO",
+      "name": "MINIMO DESCUENTO",
       "function": {
         "expression": "MIN",
         "parameter": {
@@ -388,12 +250,6 @@
   "dictionaries": [],
   "rowkey": {
     "rowkey_columns": [
-      {
-        "column": "FACTINTERNETSALES.PRODUCTKEY",
-        "encoding": "dict",
-        "encoding_version": 1,
-        "isShardBy": false
-      },
       {
         "column": "FACTINTERNETSALES.ORDERDATEKEY",
         "encoding": "dict",
@@ -417,18 +273,6 @@
         "encoding": "dict",
         "encoding_version": 1,
         "isShardBy": false
-      },
-      {
-        "column": "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
-        "encoding": "dict",
-        "encoding_version": 1,
-        "isShardBy": false
-      },
-      {
-        "column": "DIMPRODUCT.PRODUCTCATEGORYKEY",
-        "encoding": "dict",
-        "encoding_version": 1,
-        "isShardBy": false
       }
     ]
   },
@@ -443,7 +287,7 @@
               "_COUNT_",
               "TOTAL_ORDENES",
               "MAXIMO_DESCUENTO",
-              "MINIMO_DESCUENTO"
+              "MINIMO DESCUENTO"
             ]
           }
         ]
@@ -453,13 +297,10 @@
   "aggregation_groups": [
     {
       "includes": [
-        "FACTINTERNETSALES.PRODUCTKEY",
         "FACTINTERNETSALES.ORDERDATEKEY",
         "FACTINTERNETSALES.CUSTOMERKEY",
         "FACTINTERNETSALES.CURRENCYKEY",
-        "FACTINTERNETSALES.SALESTERRITORYKEY",
-        "DIMPRODUCT.PRODUCTSUBCATEGORYKEY",
-        "DIMPRODUCT.PRODUCTCATEGORYKEY"
+        "FACTINTERNETSALES.SALESTERRITORYKEY"
       ],
       "select_rule": {
         "hierarchy_dims": [],
@@ -468,7 +309,7 @@
       }
     }
   ],
-  "signature": "3JBrgvAjcAslC8uCYEWc0w==",
+  "signature": "zoojudmD7YgIyDx/RIzJSA==",
   "notify_list": [],
   "status_need_notify": [
     "ERROR",
