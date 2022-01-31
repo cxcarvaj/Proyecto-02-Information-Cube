@@ -1,6 +1,6 @@
 {
   "uuid": "f2d18814-ec95-fb10-1028-b09310ccad0f",
-  "last_modified": 1643647079925,
+  "last_modified": 1643650172551,
   "version": "3.0.0.20500",
   "name": "CubedAdventureWorksDW",
   "is_draft": false,
@@ -43,18 +43,14 @@
     {
       "name": "FIRSTNAME",
       "table": "DIMCUSTOMER",
-      "column": null,
-      "derived": [
-        "FIRSTNAME"
-      ]
+      "column": "FIRSTNAME",
+      "derived": null
     },
     {
       "name": "LASTNAME",
       "table": "DIMCUSTOMER",
-      "column": null,
-      "derived": [
-        "LASTNAME"
-      ]
+      "column": "LASTNAME",
+      "derived": null
     },
     {
       "name": "BIRTHDATE",
@@ -99,26 +95,20 @@
     {
       "name": "SALESTERRITORYREGION",
       "table": "DIMSALESTERRITORY",
-      "column": null,
-      "derived": [
-        "SALESTERRITORYREGION"
-      ]
+      "column": "SALESTERRITORYREGION",
+      "derived": null
     },
     {
       "name": "SALESTERRITORYCOUNTRY",
       "table": "DIMSALESTERRITORY",
-      "column": null,
-      "derived": [
-        "SALESTERRITORYCOUNTRY"
-      ]
+      "column": "SALESTERRITORYCOUNTRY",
+      "derived": null
     },
     {
       "name": "SALESTERRITORYGROUP",
       "table": "DIMSALESTERRITORY",
-      "column": null,
-      "derived": [
-        "SALESTERRITORYGROUP"
-      ]
+      "column": "SALESTERRITORYGROUP",
+      "derived": null
     },
     {
       "name": "DATEKEY",
@@ -131,10 +121,8 @@
     {
       "name": "DAYNUMBEROFWEEK",
       "table": "DIMDATE",
-      "column": null,
-      "derived": [
-        "DAYNUMBEROFWEEK"
-      ]
+      "column": "DAYNUMBEROFWEEK",
+      "derived": null
     },
     {
       "name": "ENGLISHDAYNAMEOFWEEK",
@@ -147,18 +135,14 @@
     {
       "name": "DAYNUMBEROFMONTH",
       "table": "DIMDATE",
-      "column": null,
-      "derived": [
-        "DAYNUMBEROFMONTH"
-      ]
+      "column": "DAYNUMBEROFMONTH",
+      "derived": null
     },
     {
       "name": "DAYNUMBEROFYEAR",
       "table": "DIMDATE",
-      "column": null,
-      "derived": [
-        "DAYNUMBEROFYEAR"
-      ]
+      "column": "DAYNUMBEROFYEAR",
+      "derived": null
     },
     {
       "name": "WEEKNUMBEROFYEAR",
@@ -273,6 +257,54 @@
         "encoding": "dict",
         "encoding_version": 1,
         "isShardBy": false
+      },
+      {
+        "column": "DIMCUSTOMER.FIRSTNAME",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMCUSTOMER.LASTNAME",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYREGION",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMSALESTERRITORY.SALESTERRITORYGROUP",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFWEEK",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFMONTH",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
+      },
+      {
+        "column": "DIMDATE.DAYNUMBEROFYEAR",
+        "encoding": "dict",
+        "encoding_version": 1,
+        "isShardBy": false
       }
     ]
   },
@@ -300,16 +332,39 @@
         "FACTINTERNETSALES.ORDERDATEKEY",
         "FACTINTERNETSALES.CUSTOMERKEY",
         "FACTINTERNETSALES.CURRENCYKEY",
-        "FACTINTERNETSALES.SALESTERRITORYKEY"
+        "FACTINTERNETSALES.SALESTERRITORYKEY",
+        "DIMCUSTOMER.FIRSTNAME",
+        "DIMCUSTOMER.LASTNAME",
+        "DIMSALESTERRITORY.SALESTERRITORYREGION",
+        "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+        "DIMSALESTERRITORY.SALESTERRITORYGROUP",
+        "DIMDATE.DAYNUMBEROFWEEK",
+        "DIMDATE.DAYNUMBEROFMONTH",
+        "DIMDATE.DAYNUMBEROFYEAR"
       ],
       "select_rule": {
-        "hierarchy_dims": [],
+        "hierarchy_dims": [
+          [
+            "DIMCUSTOMER.LASTNAME",
+            "DIMCUSTOMER.FIRSTNAME"
+          ],
+          [
+            "DIMSALESTERRITORY.SALESTERRITORYCOUNTRY",
+            "DIMSALESTERRITORY.SALESTERRITORYREGION",
+            "DIMSALESTERRITORY.SALESTERRITORYGROUP"
+          ],
+          [
+            "DIMDATE.DAYNUMBEROFYEAR",
+            "DIMDATE.DAYNUMBEROFMONTH",
+            "DIMDATE.DAYNUMBEROFWEEK"
+          ]
+        ],
         "mandatory_dims": [],
         "joint_dims": []
       }
     }
   ],
-  "signature": "zoojudmD7YgIyDx/RIzJSA==",
+  "signature": "8hYXZYOkP90dQEjY/LwfvA==",
   "notify_list": [],
   "status_need_notify": [
     "ERROR",
